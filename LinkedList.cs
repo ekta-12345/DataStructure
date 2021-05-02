@@ -38,7 +38,7 @@ namespace DataStructure
         }
 
 
-       
+
         //internal Node InsertAtParticularPosition(int position, int data)
         //{
         //    if (position < 1)
@@ -67,6 +67,8 @@ namespace DataStructure
         //    }
         //    return head;
         //}
+
+
         internal Node DeleteFirstNode()
         {
             if (this.head == null)
@@ -75,6 +77,26 @@ namespace DataStructure
             }
             this.head = this.head.next;
             return this.head;
+        }
+
+        public Node DeleteLastNode()
+        {
+            Node newNode = this.head;
+            if (this.head == null)
+            {
+                return null;
+            }
+            if (this.head.next == null)
+            {
+                this.head = null;
+                return null;
+            }
+            while (newNode.next.next != null)
+            {
+                newNode = newNode.next;
+            }
+            newNode.next = null;
+            return newNode;
         }
         internal void Display()
         {
@@ -95,4 +117,5 @@ namespace DataStructure
             }
         }
     }
+
 }

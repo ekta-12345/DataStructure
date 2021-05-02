@@ -24,11 +24,14 @@ namespace DataStructure
             //list.Display();
             //Console.ReadLine();
 
-            list.DeleteFirstNode();
+            //list.DeleteFirstNode();
+           
+            
+            list.DeleteLastNode();
             list.Display();
             Console.ReadLine();
-            list.Display();
-            Console.ReadLine();
+
+
 
         }
     }
